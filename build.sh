@@ -65,7 +65,7 @@ rm -f  ${BIN_OUTPUT_PATH}/*.deb
 # Build phantomjs
 #
 docker run -ti --rm \
-       -v ${BIN_OUTPUT_PATH}:/output ${DOCKER_IMAGE_NAME} \
+       -v ${BIN_OUTPUT_PATH}:/output \
        -v ${SCRIPT_PATH}/docker-build-arm.sh:/run.sh \
        ${DOCKER_IMAGE_NAME} \
        /run.sh
